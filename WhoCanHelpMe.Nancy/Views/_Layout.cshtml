@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Who Can Help Me?</title>
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/site.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" rightmargin="0">
+    <div id="container">
+        <div id="hdr">
+            <div id="hdr_bar"></div>
+            <div id="hdr_logo">
+                <img src="/images/logo.png" alt="" height="45" width="623" border="0" />
+            </div>
+            <div id="hdr_strap">
+                <p>helping to find people with the skills you need</p>
+            </div>
+            <div id="hdr_title">
+                <h1>@ViewBag.Title</h1>
+            </div>
+        </div>
+        <div id="body">
+            <div id="body_content">
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+            <div id="body_nav">
+                <div id="block-menu-primary-links">
+                    <div>
+                        <div>
+                            <form action="/search/bytag" method="GET">
+                                <input type="text" id="tagName" name="tagName" placeholder="Search"/>
+                            </form>
+
+                            <ul>
+                                <li class="leaf first"><a href="/">Home</a></li>
+                                <li><a href="/profile/update">You!</a></li>
+                                <li><a href="/user/signout">Sign out</a></li>
+                                <li><a href="/about">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ftr"></div>
+    </div>
+</body>
+</html>
